@@ -304,164 +304,164 @@ class Ercf:
 
         # Logging and Stats
         self.gcode.register_command('ERCF_RESET_STATS',
-                    self.cmd_ERCF_RESET_STATS,
-                    desc = self.cmd_ERCF_RESET_STATS_help)
+                                    self.cmd_ERCF_RESET_STATS,
+                                    desc = self.cmd_ERCF_RESET_STATS_help)
         self.gcode.register_command('ERCF_RESET',
-                    self.cmd_ERCF_RESET,
-                    desc = self.cmd_ERCF_RESET_help)
+                                    self.cmd_ERCF_RESET,
+                                    desc = self.cmd_ERCF_RESET_help)
         self.gcode.register_command('ERCF_DUMP_STATS',
-                    self.cmd_ERCF_DUMP_STATS,
-                    desc = self.cmd_ERCF_DUMP_STATS_help)
+                                    self.cmd_ERCF_DUMP_STATS,
+                                    desc = self.cmd_ERCF_DUMP_STATS_help)
         self.gcode.register_command('ERCF_SET_LOG_LEVEL',
-                    self.cmd_ERCF_SET_LOG_LEVEL,
-                    desc = self.cmd_ERCF_SET_LOG_LEVEL_help)
+                                    self.cmd_ERCF_SET_LOG_LEVEL,
+                                    desc = self.cmd_ERCF_SET_LOG_LEVEL_help)
         self.gcode.register_command('ERCF_DISPLAY_ENCODER_POS',
-                    self.cmd_ERCF_DISPLAY_ENCODER_POS,
-                    desc = self.cmd_ERCF_DISPLAY_ENCODER_POS_help)
+                                    self.cmd_ERCF_DISPLAY_ENCODER_POS,
+                                    desc = self.cmd_ERCF_DISPLAY_ENCODER_POS_help)
         self.gcode.register_command('ERCF_STATUS',
-                    self.cmd_ERCF_STATUS,
-                    desc = self.cmd_ERCF_STATUS_help)
+                                    self.cmd_ERCF_STATUS,
+                                    desc = self.cmd_ERCF_STATUS_help)
 
-	# Calibration
+        # Calibration
         self.gcode.register_command('ERCF_CALIBRATE',
-                    self.cmd_ERCF_CALIBRATE,
-                    desc = self.cmd_ERCF_CALIBRATE_help)
+                                    self.cmd_ERCF_CALIBRATE,
+                                    desc = self.cmd_ERCF_CALIBRATE_help)
         self.gcode.register_command('ERCF_CALIBRATE_SINGLE',
-                    self.cmd_ERCF_CALIBRATE_SINGLE,
-                    desc = self.cmd_ERCF_CALIBRATE_SINGLE_help)
+                                    self.cmd_ERCF_CALIBRATE_SINGLE,
+                                    desc = self.cmd_ERCF_CALIBRATE_SINGLE_help)
         self.gcode.register_command('ERCF_CALIBRATE_SELECTOR',
-                    self.cmd_ERCF_CALIBRATE_SELECTOR,
-                    desc = self.cmd_ERCF_CALIBRATE_SELECTOR_help)
+                                    self.cmd_ERCF_CALIBRATE_SELECTOR,
+                                    desc = self.cmd_ERCF_CALIBRATE_SELECTOR_help)
         self.gcode.register_command('ERCF_CALIB_SELECTOR',
-                    self.cmd_ERCF_CALIBRATE_SELECTOR,
-                    desc = self.cmd_ERCF_CALIBRATE_SELECTOR_help) # For backwards compatibility because it's mentioned in manual, but prefer to remove
+                                    self.cmd_ERCF_CALIBRATE_SELECTOR,
+                                    desc = self.cmd_ERCF_CALIBRATE_SELECTOR_help) # For backwards compatibility because it's mentioned in manual, but prefer to remove
         self.gcode.register_command('ERCF_CALIBRATE_ENCODER',
-                    self.cmd_ERCF_CALIBRATE_ENCODER,
-                    desc=self.cmd_ERCF_CALIBRATE_ENCODER_help)
+                                    self.cmd_ERCF_CALIBRATE_ENCODER,
+                                    desc=self.cmd_ERCF_CALIBRATE_ENCODER_help)
 
         # Servo and motor control
         self.gcode.register_command('ERCF_SERVO_DOWN',
-                    self.cmd_ERCF_SERVO_DOWN,
-                    desc = self.cmd_ERCF_SERVO_DOWN_help)
+                                    self.cmd_ERCF_SERVO_DOWN,
+                                    desc = self.cmd_ERCF_SERVO_DOWN_help)
         self.gcode.register_command('ERCF_SERVO_UP',
-                    self.cmd_ERCF_SERVO_UP,
-                    desc = self.cmd_ERCF_SERVO_UP_help)
+                                    self.cmd_ERCF_SERVO_UP,
+                                    desc = self.cmd_ERCF_SERVO_UP_help)
         self.gcode.register_command('ERCF_MOTORS_OFF',
-                    self.cmd_ERCF_MOTORS_OFF,
-                    desc = self.cmd_ERCF_MOTORS_OFF_help)
+                                    self.cmd_ERCF_MOTORS_OFF,
+                                    desc = self.cmd_ERCF_MOTORS_OFF_help)
         self.gcode.register_command('ERCF_BUZZ_GEAR_MOTOR',
-                    self.cmd_ERCF_BUZZ_GEAR_MOTOR,
-                    desc=self.cmd_ERCF_BUZZ_GEAR_MOTOR_help)
-        self.gcode.register_command('ERCF_SYNC_GEAR_MOTOR', 
-                    self.cmd_ERCF_SYNC_GEAR_MOTOR, 
-                    desc=self.cmd_ERCF_SYNC_GEAR_MOTOR_help)
+                                    self.cmd_ERCF_BUZZ_GEAR_MOTOR,
+                                    desc=self.cmd_ERCF_BUZZ_GEAR_MOTOR_help)
+        self.gcode.register_command('ERCF_SYNC_GEAR_MOTOR',
+                                    self.cmd_ERCF_SYNC_GEAR_MOTOR,
+                                    desc=self.cmd_ERCF_SYNC_GEAR_MOTOR_help)
 
-	# Core ERCF functionality
+        # Core ERCF functionality
         self.gcode.register_command('ERCF_ENABLE',
-                    self.cmd_ERCF_ENABLE,
-                    desc = self.cmd_ERCF_ENABLE_help)
+                                    self.cmd_ERCF_ENABLE,
+                                    desc = self.cmd_ERCF_ENABLE_help)
         self.gcode.register_command('ERCF_DISABLE',
-                    self.cmd_ERCF_DISABLE,
-                    desc = self.cmd_ERCF_DISABLE_help)
+                                    self.cmd_ERCF_DISABLE,
+                                    desc = self.cmd_ERCF_DISABLE_help)
         self.gcode.register_command('ERCF_ENCODER',
-                    self.cmd_ERCF_ENCODER,
-                    desc = self.cmd_ERCF_ENCODER_help)
+                                    self.cmd_ERCF_ENCODER,
+                                    desc = self.cmd_ERCF_ENCODER_help)
         self.gcode.register_command('ERCF_HOME',
-                    self.cmd_ERCF_HOME,
-                    desc = self.cmd_ERCF_HOME_help)
+                                    self.cmd_ERCF_HOME,
+                                    desc = self.cmd_ERCF_HOME_help)
         self.gcode.register_command('ERCF_SELECT',
-                    self.cmd_ERCF_SELECT,
-                    desc = self.cmd_ERCF_SELECT_help)
+                                    self.cmd_ERCF_SELECT,
+                                    desc = self.cmd_ERCF_SELECT_help)
         self.gcode.register_command('ERCF_SELECT_TOOL', # For backwards compatibility, but ERCF_SELECT is preferred
-                    self.cmd_ERCF_SELECT,
-                    desc = self.cmd_ERCF_SELECT_help)
+                                    self.cmd_ERCF_SELECT,
+                                    desc = self.cmd_ERCF_SELECT_help)
         self.gcode.register_command('ERCF_PRELOAD',
-                    self.cmd_ERCF_PRELOAD,
-                    desc = self.cmd_ERCF_PRELOAD_help)
+                                    self.cmd_ERCF_PRELOAD,
+                                    desc = self.cmd_ERCF_PRELOAD_help)
         self.gcode.register_command('ERCF_SELECT_BYPASS',
-                    self.cmd_ERCF_SELECT_BYPASS,
-                    desc = self.cmd_ERCF_SELECT_BYPASS_help)
+                                    self.cmd_ERCF_SELECT_BYPASS,
+                                    desc = self.cmd_ERCF_SELECT_BYPASS_help)
         self.gcode.register_command('ERCF_LOAD_BYPASS', # Deprecated. Has warning and redirect
-                    self.cmd_ERCF_LOAD_BYPASS,
-                    desc=self.cmd_ERCF_LOAD_BYPASS_help)
+                                    self.cmd_ERCF_LOAD_BYPASS,
+                                    desc=self.cmd_ERCF_LOAD_BYPASS_help)
         self.gcode.register_command('ERCF_UNLOAD_BYPASS', # Deprecated. Has warning and redirect
-                    self.cmd_ERCF_UNLOAD_BYPASS,
-                    desc=self.cmd_ERCF_UNLOAD_BYPASS_help)
+                                    self.cmd_ERCF_UNLOAD_BYPASS,
+                                    desc=self.cmd_ERCF_UNLOAD_BYPASS_help)
         self.gcode.register_command('ERCF_CHANGE_TOOL',
-                    self.cmd_ERCF_CHANGE_TOOL,
-                    desc = self.cmd_ERCF_CHANGE_TOOL_help)
+                                    self.cmd_ERCF_CHANGE_TOOL,
+                                    desc = self.cmd_ERCF_CHANGE_TOOL_help)
         self.gcode.register_command('ERCF_LOAD',
-                    self.cmd_ERCF_LOAD,
-                    desc=self.cmd_ERCF_LOAD_help)
+                                    self.cmd_ERCF_LOAD,
+                                    desc=self.cmd_ERCF_LOAD_help)
         self.gcode.register_command('ERCF_EJECT',
-                    self.cmd_ERCF_EJECT,
-                    desc = self.cmd_ERCF_EJECT_help)
+                                    self.cmd_ERCF_EJECT,
+                                    desc = self.cmd_ERCF_EJECT_help)
         self.gcode.register_command('ERCF_UNLOCK',
-                    self.cmd_ERCF_UNLOCK,
-                    desc = self.cmd_ERCF_UNLOCK_help)
+                                    self.cmd_ERCF_UNLOCK,
+                                    desc = self.cmd_ERCF_UNLOCK_help)
         self.gcode.register_command('ERCF_PAUSE',
-                    self.cmd_ERCF_PAUSE,
-                    desc = self.cmd_ERCF_PAUSE_help)
+                                    self.cmd_ERCF_PAUSE,
+                                    desc = self.cmd_ERCF_PAUSE_help)
         self.gcode.register_command('ERCF_RECOVER',
-                    self.cmd_ERCF_RECOVER,
-                    desc = self.cmd_ERCF_RECOVER_help)
+                                    self.cmd_ERCF_RECOVER,
+                                    desc = self.cmd_ERCF_RECOVER_help)
 
-	# Soak Testing
+        # Soak Testing
         self.gcode.register_command('ERCF_SOAKTEST_SELECTOR',
-                    self.cmd_ERCF_SOAKTEST_SELECTOR,
-                    desc = self.cmd_ERCF_SOAKTEST_SELECTOR_help)
+                                    self.cmd_ERCF_SOAKTEST_SELECTOR,
+                                    desc = self.cmd_ERCF_SOAKTEST_SELECTOR_help)
         self.gcode.register_command('ERCF_SOAKTEST_LOAD_SEQUENCE',
-                    self.cmd_ERCF_SOAKTEST_LOAD_SEQUENCE,
-                    desc = self.cmd_ERCF_SOAKTEST_LOAD_SEQUENCE_help)
+                                    self.cmd_ERCF_SOAKTEST_LOAD_SEQUENCE,
+                                    desc = self.cmd_ERCF_SOAKTEST_LOAD_SEQUENCE_help)
 
-	# User Setup and Testing
+        # User Setup and Testing
         self.gcode.register_command('ERCF_TEST_GRIP',
-                    self.cmd_ERCF_TEST_GRIP,
-                    desc = self.cmd_ERCF_TEST_GRIP_help)
+                                    self.cmd_ERCF_TEST_GRIP,
+                                    desc = self.cmd_ERCF_TEST_GRIP_help)
         self.gcode.register_command('ERCF_TEST_SERVO',
-                    self.cmd_ERCF_TEST_SERVO,
-                    desc = self.cmd_ERCF_TEST_SERVO_help)
+                                    self.cmd_ERCF_TEST_SERVO,
+                                    desc = self.cmd_ERCF_TEST_SERVO_help)
         self.gcode.register_command('ERCF_TEST_MOVE_GEAR',
-                    self.cmd_ERCF_TEST_MOVE_GEAR,
-                    desc = self.cmd_ERCF_TEST_MOVE_GEAR_help)
+                                    self.cmd_ERCF_TEST_MOVE_GEAR,
+                                    desc = self.cmd_ERCF_TEST_MOVE_GEAR_help)
         self.gcode.register_command('ERCF_TEST_LOAD',
-                    self.cmd_ERCF_TEST_LOAD,
-                    desc=self.cmd_ERCF_TEST_LOAD_help)
+                                    self.cmd_ERCF_TEST_LOAD,
+                                    desc=self.cmd_ERCF_TEST_LOAD_help)
         self.gcode.register_command('ERCF_TEST_TRACKING',
-                    self.cmd_ERCF_TEST_TRACKING,
-                    desc=self.cmd_ERCF_TEST_TRACKING_help)
+                                    self.cmd_ERCF_TEST_TRACKING,
+                                    desc=self.cmd_ERCF_TEST_TRACKING_help)
         self.gcode.register_command('ERCF_TEST_UNLOAD',
-                    self.cmd_ERCF_TEST_UNLOAD,
-                    desc=self.cmd_ERCF_TEST_UNLOAD_help)
+                                    self.cmd_ERCF_TEST_UNLOAD,
+                                    desc=self.cmd_ERCF_TEST_UNLOAD_help)
         self.gcode.register_command('ERCF_TEST_HOME_TO_EXTRUDER',
-                    self.cmd_ERCF_TEST_HOME_TO_EXTRUDER,
-                    desc = self.cmd_ERCF_TEST_HOME_TO_EXTRUDER_help)
+                                    self.cmd_ERCF_TEST_HOME_TO_EXTRUDER,
+                                    desc = self.cmd_ERCF_TEST_HOME_TO_EXTRUDER_help)
         self.gcode.register_command('ERCF_TEST_CONFIG',
-                    self.cmd_ERCF_TEST_CONFIG,
-                    desc = self.cmd_ERCF_TEST_CONFIG_help)
+                                    self.cmd_ERCF_TEST_CONFIG,
+                                    desc = self.cmd_ERCF_TEST_CONFIG_help)
 
         # Runout, TTG and Endless spool
         self.gcode.register_command('_ERCF_ENCODER_RUNOUT',
-                    self.cmd_ERCF_ENCODER_RUNOUT,
-                    desc = self.cmd_ERCF_ENCODER_RUNOUT_help)
+                                    self.cmd_ERCF_ENCODER_RUNOUT,
+                                    desc = self.cmd_ERCF_ENCODER_RUNOUT_help)
         self.gcode.register_command('_ERCF_ENCODER_INSERT',
-                    self.cmd_ERCF_ENCODER_INSERT,
-                    desc = self.cmd_ERCF_ENCODER_INSERT_help)
+                                    self.cmd_ERCF_ENCODER_INSERT,
+                                    desc = self.cmd_ERCF_ENCODER_INSERT_help)
         self.gcode.register_command('ERCF_DISPLAY_TTG_MAP',
-                    self.cmd_ERCF_DISPLAY_TTG_MAP,
-                    desc = self.cmd_ERCF_DISPLAY_TTG_MAP_help)
+                                    self.cmd_ERCF_DISPLAY_TTG_MAP,
+                                    desc = self.cmd_ERCF_DISPLAY_TTG_MAP_help)
         self.gcode.register_command('ERCF_REMAP_TTG',
-                    self.cmd_ERCF_REMAP_TTG,
-                    desc = self.cmd_ERCF_REMAP_TTG_help)
+                                    self.cmd_ERCF_REMAP_TTG,
+                                    desc = self.cmd_ERCF_REMAP_TTG_help)
         self.gcode.register_command('ERCF_SET_GATE_MAP',
-                    self.cmd_ERCF_SET_GATE_MAP,
-                    desc = self.cmd_ERCF_SET_GATE_MAP_help)
+                                    self.cmd_ERCF_SET_GATE_MAP,
+                                    desc = self.cmd_ERCF_SET_GATE_MAP_help)
         self.gcode.register_command('ERCF_ENDLESS_SPOOL',
-                    self.cmd_ERCF_ENDLESS_SPOOL,
-                    desc = self.cmd_ERCF_ENDLESS_SPOOL_help)
+                                    self.cmd_ERCF_ENDLESS_SPOOL,
+                                    desc = self.cmd_ERCF_ENDLESS_SPOOL_help)
         self.gcode.register_command('ERCF_CHECK_GATES',
-                    self.cmd_ERCF_CHECK_GATES,
-                    desc = self.cmd_ERCF_CHECK_GATES_help)
+                                    self.cmd_ERCF_CHECK_GATES,
+                                    desc = self.cmd_ERCF_CHECK_GATES_help)
 
     def handle_connect(self):
         # Setup background file based logging before logging any messages
@@ -730,9 +730,9 @@ class Ercf:
         except Exception as e:
             self._log_always('Warning: Error booting up ERCF: %s' % str(e))
 
-####################################
-# LOGGING AND STATISTICS FUNCTIONS #
-####################################
+    ####################################
+    # LOGGING AND STATISTICS FUNCTIONS #
+    ####################################
 
     def _get_action_string(self):
         return ("Idle" if self.action == self.ACTION_IDLE else
@@ -749,32 +749,32 @@ class Ercf:
 
     def get_status(self, eventtime):
         return {
-                'enabled': self.is_enabled,
-                'is_paused': self.is_paused_locked, # TODO This is confusing and should be deprecated
-                'is_locked': self.is_paused_locked,
-                'is_homed': self.is_homed,
-                'tool': self.tool_selected,
-                'gate': self.gate_selected,
-                'material': self.gate_material[self.gate_selected] if self.gate_selected >= 0 else '',
-                'next_tool': self._next_tool,
-                'last_tool': self._last_tool,
-                'last_toolchange': self._last_toolchange,
-                'clog_detection': self.enable_clog_detection,
-                'endless_spool': self.enable_endless_spool,
-                'filament': "Loaded" if self.loaded_status == self.LOADED_STATUS_FULL else
-                            "Unloaded" if self.loaded_status == self.LOADED_STATUS_UNLOADED else
-                            "Unknown",
-                'loaded_status': self.loaded_status,
-                'filament_direction': self.filament_direction,
-                'servo': "Up" if self.servo_state == self.SERVO_UP_STATE else
-                         "Down" if self.servo_state == self.SERVO_DOWN_STATE else
-                         "Unknown",
-                'ttg_map': list(self.tool_to_gate_map),
-                'gate_status': list(self.gate_status),
-                'gate_material': list(self.gate_material),
-                'gate_color': list(self.gate_color),
-                'endless_spool_groups': list(self.endless_spool_groups),
-                'action': self._get_action_string()
+            'enabled': self.is_enabled,
+            'is_paused': self.is_paused_locked, # TODO This is confusing and should be deprecated
+            'is_locked': self.is_paused_locked,
+            'is_homed': self.is_homed,
+            'tool': self.tool_selected,
+            'gate': self.gate_selected,
+            'material': self.gate_material[self.gate_selected] if self.gate_selected >= 0 else '',
+            'next_tool': self._next_tool,
+            'last_tool': self._last_tool,
+            'last_toolchange': self._last_toolchange,
+            'clog_detection': self.enable_clog_detection,
+            'endless_spool': self.enable_endless_spool,
+            'filament': "Loaded" if self.loaded_status == self.LOADED_STATUS_FULL else
+            "Unloaded" if self.loaded_status == self.LOADED_STATUS_UNLOADED else
+            "Unknown",
+            'loaded_status': self.loaded_status,
+            'filament_direction': self.filament_direction,
+            'servo': "Up" if self.servo_state == self.SERVO_UP_STATE else
+            "Down" if self.servo_state == self.SERVO_DOWN_STATE else
+            "Unknown",
+            'ttg_map': list(self.tool_to_gate_map),
+            'gate_status': list(self.gate_status),
+            'gate_material': list(self.gate_material),
+            'gate_color': list(self.gate_color),
+            'endless_spool_groups': list(self.endless_spool_groups),
+            'action': self._get_action_string()
         }
 
     def _reset_statistics(self):
@@ -841,9 +841,9 @@ class Ercf:
         msg = "ERCF Statistics:"
         msg += "\n%d swaps completed" % self.total_swaps
         msg += "\n%s spent loading (average: %s)" % (self._seconds_to_human_string(self.time_spent_loading),
-                                                    self._seconds_to_human_string(self.time_spent_loading / self.total_swaps) if self.total_swaps > 0 else "0")
+                                                     self._seconds_to_human_string(self.time_spent_loading / self.total_swaps) if self.total_swaps > 0 else "0")
         msg += "\n%s spent unloading (average: %s)" % (self._seconds_to_human_string(self.time_spent_unloading),
-                                                      self._seconds_to_human_string(self.time_spent_unloading / self.total_swaps) if self.total_swaps > 0 else "0")
+                                                       self._seconds_to_human_string(self.time_spent_unloading / self.total_swaps) if self.total_swaps > 0 else "0")
         msg += "\n%s spent paused (total pauses: %d)" % (self._seconds_to_human_string(self.time_spent_paused), self.total_pauses)
         return msg
 
@@ -899,7 +899,7 @@ class Ercf:
             'time_spent_unloading': round(self.time_spent_unloading, 1),
             'total_pauses': self.total_pauses,
             'time_spent_paused': self.time_spent_paused
-            }
+        }
         self.gcode.run_script_from_command("SAVE_VARIABLE VARIABLE=%s VALUE=\"%s\"" % (self.VARS_ERCF_SWAP_STATISTICS, swap_stats))
 
     def _persist_gate_map(self):
@@ -1014,7 +1014,7 @@ class Ercf:
         elif level > 0: log = "LONG"
         return log
 
-### LOGGING AND STATISTICS FUNCTIONS GCODE FUNCTIONS
+    ### LOGGING AND STATISTICS FUNCTIONS GCODE FUNCTIONS
 
     cmd_ERCF_RESET_STATS_help = "Reset the ERCF statistics"
     def cmd_ERCF_RESET_STATS(self, gcmd):
@@ -1097,9 +1097,9 @@ class Ercf:
         self._log_always(msg)
 
 
-#############################
-# SERVO AND MOTOR FUNCTIONS #
-#############################
+    #############################
+    # SERVO AND MOTOR FUNCTIONS #
+    #############################
 
     def _servo_set_angle(self, angle):
         self.servo.set_value(angle=angle, duration=self.servo_duration)
@@ -1146,7 +1146,7 @@ class Ercf:
             self.is_homed = False
             self._set_tool_selected(self.TOOL_UNKNOWN, True)
 
-### SERVO AND MOTOR GCODE FUNCTIONS
+    ### SERVO AND MOTOR GCODE FUNCTIONS
 
     cmd_ERCF_SERVO_UP_help = "Disengage the ERCF gear and position servo to release filament"
     def cmd_ERCF_SERVO_UP(self, gcmd):
@@ -1183,9 +1183,9 @@ class Ercf:
         self._sync_gear_to_extruder(sync, servo)
 
 
-#########################
-# CALIBRATION FUNCTIONS #
-#########################
+    #########################
+    # CALIBRATION FUNCTIONS #
+    #########################
 
     def _get_calibration_version(self):
         return self.variables.get(self.VARS_ERCF_CALIB_VERSION, 1)
@@ -1193,9 +1193,9 @@ class Ercf:
     def _get_calibration_ref(self):
         return self.variables.get(self.VARS_ERCF_CALIB_REF, 500.)
 
-#########################
-# CALIBRATION FUNCTIONS #
-#########################
+    #########################
+    # CALIBRATION FUNCTIONS #
+    #########################
 
     def _get_calibration_version(self):
         return self.variables.get(self.VARS_ERCF_CALIB_VERSION, 1)
@@ -1319,7 +1319,7 @@ class Ercf:
             vmax = max(values)
         return {'mean': mean, 'stdev': stdev, 'min': vmin, 'max': vmax, 'range': vmax - vmin}
 
-### CALIBRATION GCODE COMMANDS
+    ### CALIBRATION GCODE COMMANDS
 
     cmd_ERCF_CALIBRATE_help = "Complete calibration of all ERCF tools"
     def cmd_ERCF_CALIBRATE(self, gcmd):
@@ -1400,11 +1400,11 @@ class Ercf:
                 test_speed += speed_incr
 
             self._log_always("Load direction: mean=%(mean).2f stdev=%(stdev).2f"
-                              " min=%(min)d max=%(max)d range=%(range)d"
-                              % self._sample_stats(plus_values))
+                             " min=%(min)d max=%(max)d range=%(range)d"
+                             % self._sample_stats(plus_values))
             self._log_always("Unload direction: mean=%(mean).2f stdev=%(stdev).2f"
-                              " min=%(min)d max=%(max)d range=%(range)d"
-                              % self._sample_stats(min_values))
+                             " min=%(min)d max=%(max)d range=%(range)d"
+                             % self._sample_stats(min_values))
 
             mean_plus = self._sample_stats(plus_values)['mean']
             mean_minus = self._sample_stats(min_values)['mean']
@@ -1412,8 +1412,8 @@ class Ercf:
 
             if half_mean == 0:
                 self._log_always("No counts measured. Ensure a tool was selected with servo down " +
-                                  "before running calibration and that your encoder " +
-                                  "is working properly")
+                                 "before running calibration and that your encoder " +
+                                 "is working properly")
                 return
 
             resolution = dist / half_mean
@@ -1484,9 +1484,9 @@ class Ercf:
             self._motors_off()
 
 
-########################
-# ERCF STATE FUNCTIONS #
-########################
+    ########################
+    # ERCF STATE FUNCTIONS #
+    ########################
 
     def _setup_heater_off_reactor(self):
         self.heater_off_handler = self.reactor.register_timer(self._handle_pause_timeout, self.reactor.NEVER)
@@ -1734,7 +1734,7 @@ class Ercf:
             return old_action
 
 
-### STATE GCODE COMMANDS
+    ### STATE GCODE COMMANDS
 
     cmd_ERCF_ENABLE_help = "Enable ERCF functionality and reset state"
     def cmd_ERCF_ENABLE(self, gcmd):
@@ -1779,9 +1779,9 @@ class Ercf:
         self._log_always("ERCF state reset")
 
 
-####################################################################################
-# GENERAL MOTOR HELPERS - All stepper movements should go through here for tracing #
-####################################################################################
+    ####################################################################################
+    # GENERAL MOTOR HELPERS - All stepper movements should go through here for tracing #
+    ####################################################################################
 
     def _gear_stepper_move_wait(self, dist, wait=True, speed=None, accel=None, sync=True):
         self._sync_gear_to_extruder(False) # Safety
@@ -1790,8 +1790,8 @@ class Ercf:
         if speed is None:
             if is_long_move:
                 if (dist > 0 and
-                    self.gate_selected >= 0 and
-                    self.gate_status[self.gate_selected] != self.GATE_AVAILABLE_FROM_BUFFER):
+                        self.gate_selected >= 0 and
+                        self.gate_status[self.gate_selected] != self.GATE_AVAILABLE_FROM_BUFFER):
                     # Long pulling move when we are sure that we are at a gate but the filament buffer might be empty
                     speed = self.long_moves_speed_from_spool
                 else:
@@ -1883,6 +1883,7 @@ class Ercf:
             self.selector_stepper.do_move(dist, speed, accel)
         if wait:
             self.toolhead.wait_moves()
+            self.toolhead.dwell(0.2)
 
     def _buzz_gear_motor(self):
         initial_encoder_position = self.encoder_sensor.get_distance()
@@ -1940,16 +1941,16 @@ class Ercf:
             self.gear_stepper_run_current = self.gear_tmc.get_status(0)['run_current']
             self._log_info("Reducing reducing gear_stepper run current to %d%% for extruder syncing" % self.sync_gear_current)
             self.gcode.run_script_from_command("SET_TMC_CURRENT STEPPER=gear_stepper CURRENT=%.2f"
-                                                % ((self.gear_stepper_run_current * self.sync_gear_current) / 100.))
+                                               % ((self.gear_stepper_run_current * self.sync_gear_current) / 100.))
         elif not sync and self.gear_tmc and self.gear_tmc.get_status(0)['run_current'] < self.gear_stepper_run_current:
             self._log_info("Restoring gear_stepper run current to 100% configured")
             self.gcode.run_script_from_command("SET_TMC_CURRENT STEPPER=gear_stepper CURRENT=%.2f" % self.gear_stepper_run_current)
             self.gear_stepper_run_current = -1
 
 
-###########################
-# FILAMENT LOAD FUNCTIONS #
-###########################
+    ###########################
+    # FILAMENT LOAD FUNCTIONS #
+    ###########################
 
     # Primary method to selects and loads tool. Assumes we are unloaded.
     def _select_and_load_tool(self, tool):
@@ -2082,9 +2083,9 @@ class Ercf:
         if self.gear_tmc and self.extruder_homing_current < 100:
             gear_stepper_run_current = self.gear_tmc.get_status(0)['run_current']
             self._log_debug("Temporarily reducing gear_stepper run current to %d%% for collision detection"
-                                % self.extruder_homing_current)
+                            % self.extruder_homing_current)
             self.gcode.run_script_from_command("SET_TMC_CURRENT STEPPER=gear_stepper CURRENT=%.2f"
-                                                % ((gear_stepper_run_current * self.extruder_homing_current) / 100.))
+                                               % ((gear_stepper_run_current * self.extruder_homing_current) / 100.))
 
         initial_encoder_position = self.encoder_sensor.get_distance()
         homed = False
@@ -2097,7 +2098,7 @@ class Ercf:
                 homed = True
                 break
         self._log_debug("Extruder%s found after %.1fmm move (%d steps), encoder measured %.1fmm (total_delta %.1fmm)"
-                % (" not" if not homed else "", step*(i+1), i+1, measured_movement, total_delta))
+                        % (" not" if not homed else "", step*(i+1), i+1, measured_movement, total_delta))
 
         if self.gear_tmc and self.extruder_homing_current < 100:
             self.gcode.run_script_from_command("SET_TMC_CURRENT STEPPER=gear_stepper CURRENT=%.2f" % gear_stepper_run_current)
@@ -2191,7 +2192,7 @@ class Ercf:
                         self._log_debug("Moving the gear and extruder motors in sync for %.1fmm" % self.sync_load_length)
                         delta = self._trace_filament_move("Sync load move", self.sync_load_length, speed=self.sync_load_speed, motor="both")
                         length -= self.sync_load_length
-    
+
                 # Move the remaining distance to the nozzle meltzone under exclusive extruder stepper control
                 self._servo_up()
                 delta = self._trace_filament_move("Remainder of final move to meltzone", length, speed=self.nozzle_load_speed, motor="extruder")
@@ -2219,9 +2220,9 @@ class Ercf:
             self._set_action(current_action)
 
 
-#############################
-# FILAMENT UNLOAD FUNCTIONS #
-#############################
+    #############################
+    # FILAMENT UNLOAD FUNCTIONS #
+    #############################
 
     # Primary method to unload current tool but retains selection
     def _unload_tool(self, skip_tip=False):
@@ -2509,15 +2510,15 @@ class Ercf:
             park_pos = 35.  # TODO cosmetic: bring in from tip forming (represents parking position in extruder)
             self._log_info("Forming tip...")
             self._set_above_min_temp()
-            
+
             self._sync_gear_to_extruder(self.sync_form_tip and not disable_sync, servo=True)
 
             if self.extruder_tmc and self.extruder_form_tip_current > 100:
                 extruder_run_current = self.extruder_tmc.get_status(0)['run_current']
                 self._log_debug("Temporarily increasing extruder run current to %d%% for tip forming move"
-                                    % self.extruder_form_tip_current)
+                                % self.extruder_form_tip_current)
                 self.gcode.run_script_from_command("SET_TMC_CURRENT STEPPER=%s CURRENT=%.2f"
-                                                    % (self.extruder_name, (extruder_run_current * self.extruder_form_tip_current)/100.))
+                                                   % (self.extruder_name, (extruder_run_current * self.extruder_form_tip_current)/100.))
 
             initial_encoder_position = self.encoder_sensor.get_distance()
             initial_pa = self.printer.lookup_object(self.extruder_name).get_status(0)['pressure_advance'] # Capture PA in case user's tip forming resets it
@@ -2552,9 +2553,9 @@ class Ercf:
             self._set_action(current_action)
 
 
-#################################################
-# TOOL SELECTION AND SELECTOR CONTROL FUNCTIONS #
-#################################################
+    #################################################
+    # TOOL SELECTION AND SELECTOR CONTROL FUNCTIONS #
+    #################################################
 
     def _home(self, tool = -1, force_unload = -1):
         if self._check_in_bypass(): return
@@ -2579,7 +2580,7 @@ class Ercf:
 
             self._unselect_tool()
             self._home_selector()
-            if tool >= 0:
+            if tool >= 0 and self.is_homed:
                 self._select_tool(tool)
         finally:
             self._set_action(current_action)
@@ -2630,7 +2631,7 @@ class Ercf:
                 homed = bool(self.gear_endstop.query_endstop(last_move_time))
             else:
                 homed = bool(self.selector_endstop.query_endstop(last_move_time))
-            self._log_debug("Check #%d of %s_endstop: %s" % (i+1, ("gear" if self.sensorless_selector == 1 else "selector"), homed))
+            self._log_debug("Check #%d of %s_endstop is homed: %s" % (i+1, ("gear" if self.sensorless_selector == 1 else "selector"), homed))
             if homed:
                 break
             self.toolhead.dwell(0.1)
@@ -2640,7 +2641,7 @@ class Ercf:
         successful, travel = self._attempt_selector_move(target)
         if not successful:
             if abs(travel) < 3.0:       # Filament stuck in the current selector
-                self._log_info("Selector is blocked by inside filament, trying to recover...")
+                self._log_info("Selector is blocked by filament in the cart, trying to recover...")
                 # Realign selector
                 self.selector_stepper.do_set_position(0.)
                 self._log_trace("Resetting selector by a distance of: %.1fmm" % -travel)
@@ -2687,7 +2688,7 @@ class Ercf:
         delta = abs(target_move - travel)
         self._log_trace("Selector moved %.1fmm of intended travel from: %.1fmm to: %.1fmm (delta: %.1fmm)"
                         % (travel, init_position, target, delta))
-        if delta <= 1.0 :
+        if delta <= 5.0:
             # True up position
             self._log_trace("Truing selector %.1fmm to %.1fmm" % (delta, target))
             self.selector_stepper.do_set_position(init_position + travel)
@@ -2752,8 +2753,8 @@ class Ercf:
         self._log_debug("Selecting tool T%d on gate #%d..." % (tool, gate))
         self._select_gate(gate)
         self._set_tool_selected(tool, silent=True)
-#        if move_servo:
-#            self._servo_up()
+        #        if move_servo:
+        #            self._servo_up()
         self._log_info("Tool T%d enabled%s" % (tool, (" on gate #%d" % gate) if tool != gate else ""))
 
     def _select_gate(self, gate):
@@ -2814,7 +2815,7 @@ class Ercf:
             stepper.set_step_dist(new_step_dist)
 
 
-### CORE GCODE COMMANDS ##########################################################
+    ### CORE GCODE COMMANDS ##########################################################
 
     cmd_ERCF_UNLOCK_help = "Unlock ERCF operations"
     def cmd_ERCF_UNLOCK(self, gcmd):
@@ -3064,7 +3065,7 @@ class Ercf:
         self._servo_up()
 
 
-### GCODE COMMANDS INTENDED FOR TESTING #####################################
+    ### GCODE COMMANDS INTENDED FOR TESTING #####################################
 
     cmd_ERCF_SOAKTEST_SELECTOR_help = "Soak test of selector movement"
     def cmd_ERCF_SOAKTEST_SELECTOR(self, gcmd):
@@ -3315,9 +3316,9 @@ class Ercf:
         self._log_info(msg)
 
 
-###########################################
-# RUNOUT, ENDLESS SPOOL and GATE HANDLING #
-###########################################
+    ###########################################
+    # RUNOUT, ENDLESS SPOOL and GATE HANDLING #
+    ###########################################
 
     def _handle_runout(self, force_runout):
         if self._check_is_paused(): return
@@ -3467,7 +3468,7 @@ class Ercf:
             material = self.gate_material[g] if self.gate_material[g] != "" else "n/a"
             color = self.gate_color[g] if self.gate_color[g] != "" else "n/a"
             available = {
-                self.GATE_AVAILABLE_FROM_BUFFER: "Buffered", 
+                self.GATE_AVAILABLE_FROM_BUFFER: "Buffered",
                 self.GATE_AVAILABLE: "Available",
                 self.GATE_EMPTY: "Empty",
                 self.GATE_UNKNOWN: "Unknown"
@@ -3511,7 +3512,7 @@ class Ercf:
         return False
 
 
-### GCODE COMMANDS FOR RUNOUT, TTG MAP, GATE MAP and GATE LOGIC ##################################
+    ### GCODE COMMANDS FOR RUNOUT, TTG MAP, GATE MAP and GATE LOGIC ##################################
 
     cmd_ERCF_ENCODER_RUNOUT_help = "Internal encoder filament runout handler"
     def cmd_ERCF_ENCODER_RUNOUT(self, gcmd):
@@ -3526,11 +3527,11 @@ class Ercf:
     def cmd_ERCF_ENCODER_INSERT(self, gcmd):
         if self._check_is_disabled(): return
         self._log_debug("Filament insertion not implemented yet! Check back later")
-# Future feature :-)
-#        try:
-#            self._handle_detection()
-#        except ErcfError as ee:
-#            self._pause(str(ee))
+    # Future feature :-)
+    #        try:
+    #            self._handle_detection()
+    #        except ErcfError as ee:
+    #            self._pause(str(ee))
 
     cmd_ERCF_DISPLAY_TTG_MAP_help = "Display the current mapping of tools to ERCF gate positions. Used with endless spool"
     def cmd_ERCF_DISPLAY_TTG_MAP(self, gcmd):
